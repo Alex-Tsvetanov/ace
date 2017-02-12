@@ -16,20 +16,9 @@
         <![endif]-->
     </head>
     <body>
-        <a href="http://github.com/ajaxorg/ace">
-        <img style="z-index: 50000; position: absolute; top: 0; right: 0; border: 0; width: 125px; height: 125px" src="https://camo.githubusercontent.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" />
-        </a>
         <div id="wrapper">
             <div class="content">
                 <div class="column2">
-                    <div id="top_container" class="collapse">
-                        <h1><img src="./doc/site/images/textimage.png" alt="The high performance code editor for the web." /></h1>
-                        <div id="page_logo">
-                            <img src="./doc/site/images/ace-logo.png" />
-                            <iframe style="padding-top:5px" src="http://ghbtns.com/github-btn.html?user=ajaxorg&amp;repo=ace&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
-                            <iframe src="http://ghbtns.com/github-btn.html?user=ajaxorg&amp;repo=ace&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
-                        </div>
-                    </div>
                     <div style="clear: both"></div>
                     <ul id="tabnav" class="nav nav-pills">
                         <li>
@@ -84,61 +73,6 @@ function add(x, y) {
 var addResult = add(3, 2);
 console.log(addResult);
 </pre>
-                            <p id="embed_link"><a href="#nav=embedding">Learn how to embed this in your own site</a></p>
-                            <p class="highlight_note">Looking for a more full-featured demo? Check out the
-                                <a href="build/kitchen-sink.html" target="_blank">kitchen sink</a>.
-                            </p>
-                            <h2>Features</h2>
-                            <ul class="content-list">
-                                <li><a href="http://pcwalton.blogspot.com/2010/11/syntax-highlighting-specification.html">Syntax highlighting</a> for over 110 languages (TextMate/Sublime Text<em>.tmlanguage</em> files can be imported)</li>
-                                <li>Over 20 themes (TextMate/Sublime Text <em>.tmtheme</em> files can be imported)</li>
-                                <li>Automatic indent and outdent</li>
-                                <li>An optional command line</li>
-                                <li>Handles huge documents (four million lines seems to be the limit!)</li>
-                                <li>Fully customizable key bindings including vim and Emacs modes</li>
-                                <li>Search and replace with regular expressions</li>
-                                <li>Highlight matching parentheses</li>
-                                <li>Toggle between soft tabs and real tabs</li>
-                                <li>Displays hidden characters</li>
-                                <li>Drag and drop text using the mouse</li>
-                                <li>Line wrapping</li>
-                                <li>Code folding</li>
-                                <li>Multiple cursors and selections</li>
-                                <li>Live syntax checker (currently JavaScript/CoffeeScript/CSS/XQuery)</li>
-                                <li>Cut, copy, and paste functionality</li>
-                            </ul>
-                            <h2>Get the Open-Source Code</h2>
-                            <p>Ace is a community project. We actively encourage and support
-                                contributions! The Ace source code is <a href="http://github.com/ajaxorg/ace">hosted on GitHub</a>
-                                and released under the BSD license &dash; 
-                                very simple and friendly to all kinds of projects, whether open-source
-                                or not. Take charge of your editor and add your favorite language
-                                highlighting and keybindings!
-                            </p>
-                            <pre>git clone git://github.com/ajaxorg/ace.git</pre>
-                            <h2>History</h2>
-                            <p>Skywriter/Bespin and Ace started
-                                as two independent projects both aiming to build a no compromise
-                                code editor component for the web. Bespin started as part of
-                                Mozilla Labs and was based on the &lt;canvas> tag, while Ace is
-                                the editor component of <a href="http://c9.io">Cloud9 IDE</a>
-                                and uses the DOM for rendering. After the release of Ace at
-                                <a href="http://jsconf.eu/2010/speaker/kick_ass_code_editing_and_end.html">JSConf.eu 2010</a>
-                                in Berlin the Skywriter team decided to merge Ace with a simplified 
-                                version of Skywriter's plugin system and some of Skywriter&apos;s
-                                extensibility points. All these changes have been merged back to Ace
-                                now, which supersedes Skywriter. Both <a href="http://c9.io">Cloud9 IDE</a>
-                                and <a href="http://mozilla.org">Mozilla</a> are actively developing and
-                                maintaining Ace.
-                            </p>
-                            <h2>Related Projects</h2>
-                            <ul class="content-list">
-                                <li><a href="https://github.com/joewalker/gcli">GCLI</a></li>
-                                <li><a href="https://github.com/mozilla/dryice">DryIce</a></li>
-                                <li><a href="https://github.com/cadorn/ace-extjs">Ace wrapper for ExtJS</a></li>
-                                <li><a href="https://github.com/daveho/AceGWT">Ace wrapper for GWT</a></li>
-                            </ul>
-                        </div>
                         <div class="tab-pane fade active in" id="embedding">
                             <h1>Embedding Ace in Your Site</h1>
                             <p>Ace can be easily embedded into a web page. Get prebuilt version of ace from 
