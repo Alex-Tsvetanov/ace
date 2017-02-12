@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ACE in Action</title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css" />
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" />
+        <link href="./api/resources/csses/ace_api.css" rel="stylesheet" type="text/css" />
+        <link href="./doc/site/style.css" rel="stylesheet" type="text/css" />
+        <link href="./doc/site/images/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <script src="./build/src/ace.js"></script>
+        <script src="./build/src/ext-static_highlight.js"></script>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+</head>
+<body>
+
+<div id="editor">function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</div>
+<select id="themes" onchange="changeTheme();" style="position: fixed; right: 100px; top: 50px;">
+</select>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="./doc/template/resources/javascripts/bbq.js"></script>
+        <script src="./api/resources/javascripts/ux.js"></script>
+        <script src="./doc/site/js/main.js"></script>
+        <script defer src="./api/resources/javascripts/clicker.js"></script>
+        <script defer src="./doc/site/js/ga.js"></script>
+<script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="./ace-builds/src-noconflict/ext-language_tools.js"></script>
+<script>
+	let Themes = [
+		"terminal",
+		"twilight",
+		"monokai",
+		"vibrant_ink",
+		"pastel_on_dark",
+		"kr_theme",
+		"clouds",
+		"sqlserver",
+		"dawn",
+		"tomorrow_night_eighties",
+		"clouds_midnight",
+		"idle_fingers",
+		"tomorrow",
+		"ambiance",
+		"github",
+		"solarized_dark",
+		"solarized_light",
+		"chaos",
+		"xcode",
+		"tomorrow_night_blue",
+		"dreamweaver",
+		"iplastic",
+		"textmate",
+		"merbivore",
+		"merbivore_soft",
+		"chrome",
+		"eclipse",
+		"crimson_editor",
+		"tomorrow_night_bright",
+		"tomorrow_night",
+		"mono_industrial",
+		"kuroir",
+		"cobalt",
+		"katzenmilcs"
+	];
+	console.log (Themes);
+	console.log (Themes.length);
+	for (let i = 0 ; i < Themes.length ; i += 1)
+	{
+		console.log (i);
+		console.log (Themes [i]);
+		document.getElementById("themes").innerHTML += "<option value='" + Themes [i] + "'>" + Themes [i] + "</option>";
+	}
+	ace.require("ace/ext/language_tools");
+	var editor = (function() {
+		var aceEditor = ace.edit("editor");
+		aceEditor.setOptions({
+			enableBasicAutocompletion: true
+		});
+		// default theme
+		aceEditor.setTheme("ace/theme/clouds");
+		aceEditor.getSession().setMode("ace/mode/c_cpp");
+		return aceEditor;
+	})();
+	function changeTheme ()
+	{
+		editor.setTheme ("ace/theme/" + document.getElementById ("themes").value);
+	}
+</script>
+</body>
+</html>
